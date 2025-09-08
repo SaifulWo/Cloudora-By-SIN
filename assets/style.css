@@ -1,0 +1,10 @@
+/** Critical CSS for the theme. This file is included on every page. */
+
+/* Reset styles inspired by https://www.joshwcomeau.com/css/custom-css-reset/ */
+* {
+  box-sizing: border-box;
+}
+
+li.sub-menu {
+    top: 12px;
+}

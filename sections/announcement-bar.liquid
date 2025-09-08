@@ -1,0 +1,17 @@
+<div class="bg-[#363430] text-center text-white p-2">
+  <p>{{ section.settings.announcement }}</p>
+</div>
+
+{% schema %}
+  {
+    "name": "AnnounceMent Bar",
+    "settings": [
+      {
+        "type": "text",
+        "id": "announcement",
+        "label": "AnnounceMent",
+        "default": "Free shipping on orders over $250"
+      }
+    ]
+  }
+{% endschema %}

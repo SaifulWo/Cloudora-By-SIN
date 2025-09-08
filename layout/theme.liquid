@@ -1,16 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ request.locale.iso_code }}">
   <head>
-    {% # Inlined CSS Variables %}
-    {% render 'css-variables' %}
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
 
-    {% # Load and preload the critical CSS %}
-    {{ 'critical.css' | asset_url | stylesheet_tag: preload: true }}
 
-    {% # Social, title, etc. %}
-    {% render 'meta-tags' %}
-
-    {{ content_for_header }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+    {{ content_for_header
+    }}
   </head>
 
   <body>
@@ -19,5 +19,13 @@
     {{ content_for_layout }}
 
     {% sections 'footer-group' %}
+
+    {% comment %} fontawesome link {% endcomment %}
+
+    <script
+      src="https://kit.fontawesome.com/f47aa481f0.js"
+      crossorigin="anonymous"
+      defer></script>
+
   </body>
 </html>
