@@ -1,0 +1,30 @@
+{% render 'accordion'
+  , title: section.settings.accordion_header
+  , content: section.settings.accordion_content %}
+
+
+{% schema %}
+  {
+    "name": "Accordion List",
+    "settings": [
+      {
+        "type": "text",
+        "id": "accordion_header",
+        "label": "Accordion Header",
+        "default": "How do I create an account?"
+      },
+      {
+        "type": "richtext",
+        "id": "accordion_content",
+        "label": "Accordion Header",
+        "default": "<p>Click the button in the top right corner and follow the registration process.</p>"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Accordion List"
+      }
+    ]
+
+  }
+{% endschema %}
