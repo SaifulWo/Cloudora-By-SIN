@@ -1,0 +1,104 @@
+<div class="">
+  <div class="hero min-h-screen" style="{% if section.settings.hero_image != blank %}
+      background-image: url({{ section.settings.hero_image | image_url }});
+    {% else %}
+      background-image: url(https://www.fcilondon.co.uk/site-assets/blog/content/77377/black-and-white-bedroom-furniture-ideas-for-different-design-styles.jpg);
+    {% endif %}">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-neutral-content text-center">
+      <div class="max-w-md">
+        <h1 class="mb-5 text-5xl font-bold">{{ section.settings.hero_heading }}</h1>
+        <div class="pb-5 text-2xl">
+          {{ section.settings.hero_sub_heading }}
+        </div>
+        <a href="{{ section.settings.hero_button_link }}">
+          <button class="btn bg-white text-black">{{ section.settings.hero_button }}</button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <div class="bg-[#363430] py-3 text-slate-300 text-lg">
+    <marquee
+      direction="left"
+      loop="infinite"
+      onmouseover="this.stop();"
+      onmouseout="this.start();"
+      behavior="alternate">
+      <i class="fa-regular fa-heart"></i>
+      <span>Clean, conscious comfort</span>
+      <i class="fa-regular fa-star"></i>
+      <span>Made for modern sleep</span>
+      <i class="fa-regular fa-sun"></i>
+      <span>Softer with every wash</span>
+      <i class="fa-regular fa-lightbulb"></i>
+      <span>Clean, conscious comfort</span>
+      <i class="fa-regular fa-gem"></i>
+      <span>Made for modern sleep</span>
+      <i class="fa-regular fa-comment-dots"></i>
+      <span>Clean, conscious comfort</span>
+      <i class="fa-regular fa-moon"></i>
+      <span>Made for modern sleep</span>
+      <i class="fa-regular fa-circle"></i>
+      <span>Softer with every wash</span>
+      <i class="fa-regular fa-face-smile"></i>
+      <span>Clean, conscious comfort &</span>
+      <i class="fa-regular fa-cloud"></i>
+      <span>Made for modern sleep</span>
+      <i class="fa-regular fa-headphones"></i>
+    </marquee>
+  </div>
+
+  <div class="bg-[#E8E3DD] text-center text-4xl text-black px-72 font-bold py-20 hero_bottom_text">
+    <h1>{{ section.settings.hero_bottom_text }}</h1>
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Hero Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "hero_image",
+        "label": "Hero Image"
+      },
+      {
+        "type": "text",
+        "id": "hero_heading",
+        "label": "Hero Heading",
+        "default": "Reimagined for rest"
+      },
+      {
+        "type": "richtext",
+        "id": "hero_sub_heading",
+        "label": "Hero Sub Heading",
+        "default": "<p>Designed to help you sleep better.</p>"
+      },
+      {
+        "type": "url",
+        "id": "hero_button_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "hero_button",
+        "label": "Button",
+        "default": "SHOP THE COLLECTION"
+      },
+      {
+        "type": "text",
+        "id": "hero_bottom_text",
+        "label": "Hero Bottom Text",
+        "default": "We believe better sleep starts with better materials. Our premium bedding is crafted for comfort and calm - so every night feels like a deep exhale."
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero Banner"
+      }
+    ]
+
+  }
+{% endschema %}

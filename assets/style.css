@@ -8,3 +8,27 @@
 li.sub-menu {
     top: 12px;
 }
+
+marquee > span {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+marquee > i{
+  font-size: 15px;
+  color: gray;
+}
+
+.hero_bottom_text h1 {
+    line-height: 45px;
+}
+
+.collection-img svg {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.collection-img img {
+    width: 100%;
+    border-radius: 10px;
+}

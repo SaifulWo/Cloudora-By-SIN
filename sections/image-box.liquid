@@ -1,0 +1,86 @@
+<div class="pt-16 flex">
+  {% comment %} first image {% endcomment %}
+
+  <div class="bg-base-100 p-10 h-[600px] flex-1" style="{% if  section.settings.image != blank%}background: url({{ section.settings.image |  image_url  }}); {% else %} background: url(https://m.media-amazon.com/images/I/91B8KIMBfJL._AC_SL1500_.jpg); {% endif %} %} background-repeat: no-repeat; background-size: cover; background-position: center;">
+
+    <div class="pt-96">
+      <h2 class="pb-4 text-white font-bold text-lg">{{ section.settings.heading }}</h2>
+      <div class="">
+        <a href="{{ section.settings.url }}">
+          <button class="btn bg">{{ section.settings.button }}</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {% comment %} second image {% endcomment %}
+  <div class="bg-base-100 p-10 h-[600px] flex-1" style="{% if  section.settings.image2 != blank%}background: url({{ section.settings.image2 |  image_url  }}); {% else %} background: url(https://www.jenniferadams.com/cdn/shop/files/Chenille_Sherpa_Blanket_Cream_06.2023_1.jpg?v=1717196889); {% endif %} %} background-repeat: no-repeat; background-size: cover; background-position: center;">
+
+    <div class="pt-96">
+      <h2 class="pb-4 text-white font-bold text-lg">{{ section.settings.heading2 }}</h2>
+      <div class="">
+        <a href="{{ section.settings.url2 }}">
+          <button class="btn bg">{{ section.settings.button2 }}</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Collection Image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Select Image"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Weighted Blanket"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button",
+        "label": "Button Text",
+        "default": "SHOP NOW"
+      },
+      {
+        "type": "image_picker",
+        "id": "image2",
+        "label": "Select Image"
+      },
+      {
+        "type": "text",
+        "id": "heading2",
+        "label": "Heading",
+        "default": "Luxe Throw"
+      },
+      {
+        "type": "url",
+        "id": "url2",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "button2",
+        "label": "Button Text",
+        "default": "SHOP NOW"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection Image"
+      }
+    ]
+  }
+{% endschema %}

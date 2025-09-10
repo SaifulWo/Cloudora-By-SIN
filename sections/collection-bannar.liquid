@@ -1,0 +1,79 @@
+<div class="w-11/12 mx-auto bg-white">
+  <h1 class="pt-15 pb-5 font-bold text-3xl">{{ section.settings.c_heading }}</h1>
+  <div class="text-lg pb-8">{{ section.settings.c_sub_heading }}</div>
+
+  <div class="grid grid-cols-4 gap-4 gap-y-14 content-center items-center">
+
+    {% for product in section.settings.collection.products %}
+      <div>
+
+        <div class="collection-img pb-3">
+          {{ product.featured_image | image_url: width: 400 | image_tag }}
+        </div>
+        <strong>{{ product.title }}</strong>
+        <p class="pt-1">
+          <span class="line-through text-red-500">{{ product.compare_at_price | money }}</span>
+          Form
+
+          <span class="font-medium">{{ product.price | money }}</span>
+        </p>
+
+      </div>
+
+    {% else %}
+      {% for item in (1..12) %}
+        {%- capture update_image -%}
+            {%- cycle 1, 2, 3, 4  -%}
+        {%- endcapture -%}
+        {%- assign product_title = "Celia Dress, Amedeo Overalls, Aran High Neck, Cerapetra Overalls, Adele Jumpsuit, Gary Jumpsuit, Ballad Dress in Emerald, Health Pants, Georgia Skirt, Jodo Pants, New Dean Pant, Lure Pants" | split: "," -%}
+
+        {%- assign product_price = "10$, 20$, 30$, 40$, 50$, 60$, 70$, 80$, 90$, 100$, 110$, 120$" | split: "," -%}
+        {%- assign product_compare = "30$, 40$, 50$, 60$, 70$, 80$, 90$, 100$, 110$, 120$, 130$, 140$" | split: "," -%}
+        <div>
+
+          <div class="collection-img pb-3">
+            {{ "product-apparel-" | append: update_image | placeholder_svg_tag }}
+          </div>
+          <strong>{{ product_title[forloop.index0] }}</strong>
+          <p class="pt-1">
+            <span class="line-through text-red-500">{{ product_compare[forloop.index0] }}</span>
+            Form
+            <span class="font-medium">{{ product_price[forloop.index0] }}</span>
+          </p>
+
+        </div>
+      {% endfor %}
+    {% endfor %}
+
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Collections",
+    "settings": [
+      {
+        "type": "text",
+        "id": "c_heading",
+        "label": "Collection Heading",
+        "default": "The Haven sheet collection"
+      },
+      {
+        "type": "richtext",
+        "id": "c_sub_heading",
+        "label": "Collection Sub Heading",
+        "default": "<p>Each of our sheet sets is thoughtfully crafted to suit the way you rest - whether you run hot, love extra softness, crave hotel-level crispness, or prefer a touch of luxury.</p>"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Select Collection"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Collections"
+      }
+    ]
+  }
+{% endschema %}
