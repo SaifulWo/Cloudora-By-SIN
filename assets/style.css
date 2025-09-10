@@ -32,3 +32,12 @@ marquee > i{
     width: 100%;
     border-radius: 10px;
 }
+
+.collection-image img, .collection-image svg {
+    height: 450px;
+    border-radius: 10px;
+}
+
+.collection-image svg {
+    width: 100%;
+}
