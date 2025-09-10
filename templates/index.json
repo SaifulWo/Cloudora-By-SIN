@@ -97,14 +97,6 @@
         "accordion_header": "Accordion List",
         "accordion_content": "<p>Click the button in the top right corner and follow the registration process.</p>"
       }
-    },
-    "collections_yxjNpK": {
-      "type": "collections",
-      "name": "t:general.collections_grid",
-      "settings": {
-        "grid_item_width": "collections--compact",
-        "grid_gap": 10
-      }
     }
   },
   "order": [
@@ -112,7 +104,6 @@
     "collection_bannar_HdimQb",
     "image_box_4pL4jX",
     "collection_list_8xjkf9",
-    "accordion_section_drXnzB",
-    "collections_yxjNpK"
+    "accordion_section_drXnzB"
   ]
 }
