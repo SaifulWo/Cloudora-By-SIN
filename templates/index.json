@@ -11,8 +11,63 @@
   "sections": {
     "main": {
       "type": "hero",
-      "settings": {}
+      "settings": {
+        "hero_image": "shopify://shop_images/5.jpg",
+        "hero_heading": "Reimagined for rest",
+        "hero_sub_heading": "<p>Designed to help you sleep better.</p>",
+        "hero_button_link": "",
+        "hero_button": "SHOP THE COLLECTION",
+        "hero_bottom_text": "We believe better sleep starts with better materials. Our premium bedding is crafted for comfort and calm - so every night feels like a deep exhale."
+      }
+    },
+    "collection_bannar_dGPn6C": {
+      "type": "collection-bannar",
+      "name": "Product Collections",
+      "settings": {
+        "c_heading": "The Haven sheet collection",
+        "c_sub_heading": "<p>Each of our sheet sets is thoughtfully crafted to suit the way you rest - whether you run hot, love extra softness, crave hotel-level crispness, or prefer a touch of luxury.</p>",
+        "collection": "frontpage"
+      }
+    },
+    "image_box_kzgy93": {
+      "type": "image-box",
+      "name": "Collection Image",
+      "settings": {
+        "image": "shopify://shop_images/3_8c18b0ce-df12-4c1e-adb6-b9f0c1ed1e81.jpg",
+        "heading": "Weighted Blanket",
+        "url": "",
+        "button": "SHOP NOW",
+        "image2": "shopify://shop_images/1_14dec221-7275-44b2-ac9f-905b2acb0cb0.jpg",
+        "heading2": "Luxe Throw",
+        "url2": "",
+        "button2": "SHOP NOW"
+      }
+    },
+    "collection_list_YyXyJi": {
+      "type": "collection-list",
+      "name": "Collection List",
+      "settings": {
+        "collection_list": [
+          "mattress-accessories",
+          "blankets",
+          "pillows"
+        ]
+      }
+    },
+    "accordion_section_rTf93K": {
+      "type": "accordion-section",
+      "name": "Accordion List",
+      "settings": {
+        "accordion_header": "How do I create an account?",
+        "accordion_content": "<p>Click the button in the top right corner and follow the registration process.</p>"
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "collection_bannar_dGPn6C",
+    "image_box_kzgy93",
+    "collection_list_YyXyJi",
+    "accordion_section_rTf93K"
+  ]
 }
